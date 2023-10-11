@@ -6,7 +6,7 @@ import connectDatabase from "./db/Database";
 //handling uncaught Exceptions
 process.on("uncaughtException", (err)=>{
     console.log(`Error : ${err.message}`);
-    console.log('shutting down the server for handling uncaught exception ')
+    console.log('shutting down the server for handling uncaught exception in code ')
 })
 
 //config
