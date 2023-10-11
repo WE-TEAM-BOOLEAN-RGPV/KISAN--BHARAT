@@ -10,19 +10,19 @@ const FpoCard = () => {
               Jagriti Dalhan Producer Company Ltd.
             </p>
             <div className=" top-[43px] left-[0px] flex flex-row items-start justify-start gap-[10px] ">
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Sagar</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Pulses Programme</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Farm</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Forestry</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">76 Members</p>
               </div>
             </div>

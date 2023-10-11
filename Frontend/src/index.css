@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .Product-details-table-element{
+        @apply flex flex-row gap-[400px]  justify-between items-center bg-gray-50 h-[35px] px-9 border-b-2 border-gray-500
+    }
+    .big-primary-button{
+        @apply w-[40%] text-white bg-green-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center
+    }
+    .tag-element{
+        @apply rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer
+    }
+}

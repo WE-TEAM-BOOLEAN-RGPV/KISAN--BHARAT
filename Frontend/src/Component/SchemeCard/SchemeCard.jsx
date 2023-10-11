@@ -3,32 +3,32 @@ import React from "react";
 const SchemeCard = () => {
   return (
     <>
-      <div className="flex item-center justify-center mt-12">
+      <div className="flex item-center justify-center mt-12 font-Roboto">
         <div className=" box-border w-[1100px] h-[300px] [background:linear-gradient(180deg,_#FBFBFB,_#E3FFDE)] overflow-hidden flex flex-row items-start justify-center py-[33px] pr-[145px] pl-[26px] gap-[152px] text-left text-[24px] text-black font-poppins border-[2px] border-solid border-gray-200 rounded-[15px]">
           <div className="flex flex-col items-start justify-center ">
             <p className="top-[0px] font-semibold">
             Kisan Kalyan Yojna
             </p>
             <div className=" top-[43px] left-[0px] flex flex-row items-start justify-start gap-[10px] ">
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">State Goverment</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">FPO</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Farm</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Forestry</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Kisan</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Madhya Pradesh</p>
               </div>
-              <div className="rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer hover:bg-green-100 hover:text-green-400">
+              <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Pmksy</p>
               </div>
             </div>

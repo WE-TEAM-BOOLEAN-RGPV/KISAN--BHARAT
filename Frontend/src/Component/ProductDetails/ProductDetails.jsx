@@ -4,9 +4,9 @@ const ProductDetails = () => {
   return (
     <div
       className="w-[1200px] h-[500px] m-auto 
-    border-2 border-gray-200 rounded-lg shadow flex flex-row  p-5 "
+    border-2 border-gray-200 rounded-lg shadow flex flex-row  p-5 font-Roboto"
     >
-      <div className="w-[500px] flex flex-row gap-4">
+      <div className="w-[500px] flex flex-row gap-4 font-Roboto">
         <div className="w-[100px] flex flex-col gap-3 justify-start ">
           <img
             src="https://5.imimg.com/data5/SELLER/Default/2023/6/313275363/FK/FI/CN/66857433/khapli-wheat-250x250.webp"
@@ -50,27 +50,27 @@ const ProductDetails = () => {
           </p>
         </div>
         <div className="flex flex-col mt-6">
-          <div className="flex flex-row gap-[400px]  justify-between item-center bg-gray-50 h-[35px] px-9 border-b-2 border-gray-500">
+          <div className="Product-details-table-element">
             <p className="">Cuisine</p>
             <p className="">Indian</p>
           </div>
-          <div className="flex flex-row gap-[400px]   justify-between item-center bg-gray-50 h-[35px] px-9 border-b-2 border-gray-500">
+          <div className="Product-details-table-element">
             <p>Brand</p>
             <p className="">Jagriti Dalhan</p>
           </div>
-          <div className="flex flex-row gap-[400px]  justify-between item-center bg-gray-50 h-[35px] px-9 border-b-2 border-gray-500">
+          <div className="Product-details-table-element">
             <p>min quantity</p>
             <p className="">50Kg</p>
           </div>
-          <div className="flex flex-row gap-[400px] justify-between  item-center bg-gray-50 h-[35px] px-9 border-b-2 border-gray-500">
+          <div className="Product-details-table-element">
             <p>Total Stock</p>
             <p className="">10 quiental</p>
           </div>
-          <div className="flex flex-row gap-[400px]  justify-between item-center bg-gray-50 h-[35px] px-9 border-b-2 border-gray-500">
+          <div className="Product-details-table-element">
             <p>burggain possible</p>
             <p className="">yes</p>
           </div>
-          <div className="flex flex-row gap-[400px]  justify-between item-center bg-gray-50 h-[35px] px-9 border-b-1 border-gray-500">
+          <div className="Product-details-table-element">
             <p>Colour</p>
             <p className="">brown</p>
           </div>
@@ -87,7 +87,7 @@ const ProductDetails = () => {
         <div className="flex flex-row w-full mt-4 justify-evenly">
           <button
             type="submit"
-            class="w-[40%] text-white bg-green-600 hover:bg-green-700  focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            class="big-primary-button hover:bg-green-700  focus:outline-none  "
           >
             Buy Now
           </button>
