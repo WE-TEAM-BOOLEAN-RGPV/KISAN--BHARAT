@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-    <div className='flex justify-center items-center mt-10'>
-   <FpoCard/>
+    <div className='flex justify-center items-center '>
+    <FpoApply/>
     </div>
   
     </>

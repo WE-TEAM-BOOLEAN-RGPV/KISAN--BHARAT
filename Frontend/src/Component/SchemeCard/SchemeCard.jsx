@@ -14,7 +14,7 @@ const SchemeCard = () => {
                 <p className="font-semibold text-xs">State Goverment</p>
               </div>
               <div className="tag-element hover:bg-green-100 hover:text-green-400">
-                <p className="font-semibold text-xs">FPO</p>
+                <p className="font-semibold text-xs">FPO</p> 
               </div>
               <div className="tag-element hover:bg-green-100 hover:text-green-400">
                 <p className="font-semibold text-xs">Farm</p>
