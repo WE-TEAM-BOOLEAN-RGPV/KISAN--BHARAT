@@ -1,6 +1,6 @@
 import React from "react";
 
-import Input from "../input";
+import Input from"../Input";
 
 const FpoApply = () => {
   return (
@@ -63,7 +63,7 @@ const FpoApply = () => {
                 />
                 <Input
                   label="Land Owned"
-                  type="email"
+                  type="Text"
                   placeholder="Enter how much land you owned"
                   required
                 />
@@ -72,12 +72,18 @@ const FpoApply = () => {
             
              
             </div>
-            <div className="flex justify-end">
+            <div className="flex gap-6 justify-end">
               <button
                 type="submit"
                 className="w-[20%] px-6 py-3 mt-4 font-semibold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none"
               >
-                Join Now
+              Apply
+              </button>
+              <button
+                type="submit"
+                className="w-[20%] px-6 py-3 mt-4 font-semibold text-green-500 bg-white rounded-md border-2 border-green-500 "
+              >
+                Cancel
               </button>
             </div>
           </form>

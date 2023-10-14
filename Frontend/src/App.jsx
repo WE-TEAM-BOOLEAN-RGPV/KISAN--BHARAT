@@ -13,8 +13,8 @@ function App() {
 
   return (
     <>
-    <div className='flex justify-center items-center '>
-    <FpoApply/>
+    <div className='h-screen flex justify-center items-center bg-[#dadada] '>
+    <Login/>
     </div>
   
     </>
