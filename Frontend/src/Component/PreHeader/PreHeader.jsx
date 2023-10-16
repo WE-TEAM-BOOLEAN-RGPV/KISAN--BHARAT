@@ -1,7 +1,8 @@
 import React from "react";
 import Input from "../Input";
-
+import {Link, useNavigate} from 'react-router-dom'
 const PreHeader = () => {
+  const navigate=useNavigate();
   return (
     <>
       <div className="w-full h-[70px] bg-[#f5f5f5] mt-0 flex px-[5%] justify-between border-b-2 border-gray-200">
@@ -17,12 +18,15 @@ const PreHeader = () => {
              <button
                 type="submit"
                 className="w-[150px] px-6 py-3 h-[50px]  font-semibold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none"
+                onClick={()=>navigate("/Product/Buy")}
               >
               Buy
               </button>
               <button
                 type="submit"
-                className="w-[150px] px-6 py-3 h-[50px] font-semibold bg-white text-green-500 border-2 border-green-500 rounded-md hover:bg-green-600 hover:text-white focus:outline-none"
+                className="w-[150px] px-6 py-3 h-[50px] font-semibold bg-white text-green-500 border-2 border-green-500 rounded-md  focus:outline-none"
+                onClick={()=>navigate("/Product/Rent")}
+
               >
                Rent
               </button>
@@ -31,7 +35,8 @@ const PreHeader = () => {
         <div className="flex flex-row gap-3 py-2">
         <button
                 type="submit"
-                className="w-[150px] px-6 py-3  font-semibold bg-white text-green-500 border-2 border-green-500 rounded-md hover:bg-green-600 hover:text-white focus:outline-none"
+                className="w-[150px] px-6 py-3  font-semibold bg-white text-green-500 border-2 border-green-500 rounded-md  focus:outline-none"
+                onClick={()=>navigate("/Login")}
               >
               Join as Fpo
               </button>

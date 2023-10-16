@@ -2,8 +2,10 @@ import React from "react";
 
 import Input from"../Input";
 import Button from "../Button/Button";
+import {Link, useNavigate} from 'react-router-dom'
 
 const FpoApply = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-gray-50 w-full ">
       <section className="flex justify-center items-center h-full mx-auto mt-10">
@@ -83,6 +85,7 @@ const FpoApply = () => {
               <button
                 type="submit"
                 className="w-[20%] px-6 py-3 mt-4 font-semibold text-green-500 bg-white rounded-md border-2 border-green-500 "
+                onClick={()=>navigate(-1)}
               >
                 Cancel
               </button>

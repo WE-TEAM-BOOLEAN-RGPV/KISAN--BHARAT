@@ -1,6 +1,8 @@
 import React from "react";
+import {Link, useNavigate} from 'react-router-dom'
 
 const SchemeCard = () => {
+  const navigate=useNavigate();
   return (
     <>
       <div className="flex item-center justify-center mt-12 font-Roboto">
@@ -49,6 +51,7 @@ const SchemeCard = () => {
             <button
               type="button"
               class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              onClick={()=>navigate("/Scheme/:id")}
             >
               ApplyNow
             </button>

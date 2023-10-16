@@ -1,10 +1,11 @@
 import React from 'react'
-import {Link } from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { useState } from 'react';
 
 
 const Header = () => {
   const [active, setActive] = useState(false);
+  const navigate=useNavigate();
   window.addEventListener("scroll", () => {
     if (window.scrollY > 70) {
       setActive(true);
@@ -44,12 +45,20 @@ const Header = () => {
                
             </ul>
         </div>
-        <div>
+        <div className='flex w-[30%] gap-5'>
         <button
                 type="submit"
                 className="w-full px-6 py-3  font-semibold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none"
+                onClick={()=>navigate("/Login")}
               >
-              Become a Seller
+              Login
+              </button>
+        <button
+                type="submit"
+                className="w-full px-6 py-3 h-[50px] font-semibold bg-white text-green-500 border-2 border-green-500 rounded-md  focus:outline-none"
+                onClick={()=>navigate("/Login")}
+              >
+              Sign Up
               </button>
         </div>
     </div>

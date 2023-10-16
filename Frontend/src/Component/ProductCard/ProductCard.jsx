@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = () => {
+  const navigate=useNavigate();
   return (
     <div className="flex justify-center items-center mt-10">
       <div class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow flex flex-col gap-5 p-4 ">
@@ -34,7 +36,9 @@ const ProductCard = () => {
             <button className="flex min-w-24 h-10 justify-center items-center bg-[#219653] text-white rounded-md hover:bg-[#219653]/90 transition-all duration-300 ease-in-out cursor-pointer py-3 px-5">
               Contact
             </button>
-            <button className="flex min-w-24 h-10 justify-center items-center bg-white text-[#219653] rounded-md border-2 border-[#219653] hover:bg-[#219653]/90  hover:text-white transition-all duration-300 ease-in-out cursor-pointer ml-5 py-3 px-5">
+            <button className="flex min-w-24 h-10 justify-center items-center bg-white text-[#219653] rounded-md border-2 border-[#219653] hover:bg-[#219653]/90  hover:text-white transition-all duration-300 ease-in-out cursor-pointer ml-5 py-3 px-5"
+            onClick={() => navigate("/Product/:id")}
+            >
               Details
             </button>
           </div>
