@@ -13,4 +13,10 @@
     .tag-element{
         @apply rounded-[5px] bg-[#DCDCDC] h-[25px] overflow-hidden flex flex-row items-center justify-center py-1 px-2 box-border cursor-pointer
     }
+    .bold-text{
+        @apply text-4xl font-extrabold leading-none tracking-tight text-gray-900 font-Roboto 
+    }
+    .bold-text-sm{
+        @apply text-lg font-extrabold leading-none tracking-tight text-gray-500 font-Roboto 
+    }
 }

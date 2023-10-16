@@ -1,24 +1,31 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import './App.css'
-import FpoApply from './Component/FpoApply/FpoApply'
-import FpoCard from './Component/FpoCard/FpoCard'
-import Login from './Component/Login/Login'
-import ProductDetails from './Component/ProductDetails/ProductDetails'
-import SchemeCard from './Component/SchemeCard/SchemeCard'
-
-
+import PreHeader from "./Component/PreHeader/PreHeader";
+import Header from "./Component/Header/Header";
+import Job from "./Pages/JobApply/Job";
+import Home from "./Pages/HomePage/Home";
+import Loan from "./Pages/Loan/Loan";
 
 function App() {
-
-
   return (
     <>
-    <div className='h-screen flex justify-center items-center bg-[#dadada] '>
-    <Login/>
-    </div>
-  
+      <BrowserRouter>
+        <div className="bg-[#f5f5f5] w-full h-full">
+          <PreHeader />
+          <Header />
+          <Routes>
+            <Route path="/" element={ <Home/>} />
+            <Route path="/product" element={  <Job/>} />
+            <Route path="/Job" element={  <Job/>} />
+            <Route path="/Loan" element={  <Loan/>} />
+            <Route path="/Scheme" element={  <Job/>} />
+          </Routes>
+         
+        </div>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
