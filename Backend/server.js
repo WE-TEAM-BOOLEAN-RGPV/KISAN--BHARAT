@@ -3,6 +3,7 @@ require('dotenv').config()
 const PORT = process.env.port
 const path = require('path')
 const app = express()
+const bodyParser = require('body-parser')
 const cors = require('cors')
 const get_router = require('./routes/user')
 const post_router = require('./routes/data')
@@ -12,9 +13,10 @@ const session = require('express-session')
 const methodOverride = require("method-override")
 
 
-app.use(express.json());
-app.use(cors());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json({ extended: false }))
+app.use(cors())
+app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: false }))
 
 app.use('/user', get_router.urouter);
 app.use('/data', post_router.drouter);

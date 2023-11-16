@@ -1,8 +1,8 @@
 const express = require('express')
-const drouter = express.Router()
+const router = express.Router()
 const {create_farm} = require('../controller/data')
 
-drouter
+router
     .post('/farmers', create_farm);
 
-exports.drouter = drouter;
+exports.drouter = router;
