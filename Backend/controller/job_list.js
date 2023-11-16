@@ -11,19 +11,19 @@ const job_data = async (req,res) => {
     }
 }
 
-const create_job = async(req,res) => {
-    try {
-        const new_job = new job_list(req.body);
-        await new_job.save();
-        res.status(201).json({ message: 'Data saved successfully' });
+// const create_job = async(req,res) => {
+//     try {
+//         const new_job = new job_list(req.body);
+//         await new_job.save();
+//         res.status(201).json({ message: 'Data saved successfully' });
         
-      } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Error! data not saved!' });
-      }
-}
+//       } catch (err) {
+//         console.error(err);
+//         res.status(500).json({ message: 'Error! data not saved!' });
+//       }
+// }
 
 module.exports = {
     job_data,
-    create_job
+    // create_job
 }

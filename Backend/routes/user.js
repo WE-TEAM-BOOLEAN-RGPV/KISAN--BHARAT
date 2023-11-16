@@ -1,9 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const {farm_data, create_farm} = require('../controller/farmer')
-const {vendor_data, create_vendor} = require('../controller/vendor')
-const {buy_prod_data, create_buy_prod} = require('../controller/prod_buy')
-const {rent_prod_data, create_rent_prod} = require('../controller/prod_rent')
+const {farm_data} = require('../controller/farmer')
+const {vendor_data} = require('../controller/vendor')
+const {buy_prod_data} = require('../controller/prod_buy')
+const {rent_prod_data} = require('../controller/prod_rent')
+const {create_farm} = require('../app')
+const {create_vendor} = require('../app')
+const {create_buy_prod} = require('../app')
+const {create_rent_prod} = require('../app')
 
 //farmers
 router
