@@ -1,17 +1,26 @@
 const express = require('express')
+require('dotenv').config()
+const PORT = process.env.port
 const path = require('path')
 const app = express()
-const PORT = 5174
 const cors = require('cors')
-const router = require('./routes/user')
+const get_router = require('./routes/user')
+const post_router = require('./routes/data')
+const bcrypt = require('bcrypt')
+const flash = require('express-flash')
+const session = require('express-session')
+const methodOverride = require("method-override")
+
 
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
-app.use('/', router.user_router);
+
+app.use('/user', get_router.urouter);
+app.use('/data', post_router.drouter);
 
 app.get('/', (req,res) => {
-  res.sendFile(path.join(__dirname, "./view/index.html"));
+  res.sendFile(path.join(__dirname, "./view/login.html"));
 })
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
