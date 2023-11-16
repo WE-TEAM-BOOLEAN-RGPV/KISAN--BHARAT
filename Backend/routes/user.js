@@ -1,13 +1,34 @@
 const express = require('express')
 const router = express.Router()
-const {farm_data, vendor_data, prod_buy_data, prod_rent_data, fpo_app_data, job_list_data} = require('../controller/user')
+const {farm_data, create_farm} = require('../controller/farmer')
+const {vendor_data, create_vendor} = require('../controller/vendor')
+const {buy_prod_data, create_buy_prod} = require('../controller/prod_buy')
+const {rent_prod_data, create_rent_prod} = require('../controller/prod_rent')
 
+//farmers
 router
-  .get('/farmers', farm_data)
-  .get('/vendors', vendor_data)
-  .get('/prod_buy', prod_buy_data)
-  .get('/prod_rent', prod_rent_data)
-  .get('/fpo_app', fpo_app_data)
-  .get('/job_list', job_list_data);
+  .get('/get', farm_data)
+  .post('/post', create_farm);
 
-  exports.urouter = router;
+exports.farmer_router = router
+
+//vendors
+router
+  .get('/get', vendor_data)
+  .post('/post', create_vendor);
+
+exports.vendor_router = router
+
+//prod_buy
+router
+  .get('/get', buy_prod_data)
+  .post('/post', create_buy_prod);
+
+exports.buy_prod_router = router
+
+//prod_rent
+router
+  .get('/get', rent_prod_data)
+  .post('/post', create_rent_prod);
+
+exports.rent_prod_router = router
