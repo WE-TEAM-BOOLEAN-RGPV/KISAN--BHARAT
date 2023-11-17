@@ -1,12 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const path = require('path');
+const express = require('express')
+const router = express.Router()
+const {job_data} = require('../controller/job_list')
+const {create_job} = require('../app')
 
-router.get('/create', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'job_in.html'));
-});
-router.get('/cancel', (req, res) => {
-    res.redirect(301, '/profile.html'); 
-});
+router
+  .get('/get', job_data)
+  .post('/post', create_job)
 
-module.exports = router;
+  module.exports = {router}

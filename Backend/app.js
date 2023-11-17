@@ -1,3 +1,4 @@
+const { upload } = require('./controller/images');
 const {farmers, vendors, prod_buy, prod_rent} = require('./model/user')
 
 //**(req.body) me formatted json input jayega frontend se schema k according**
@@ -31,28 +32,62 @@ const create_vendor = async(req,res) => {
 
 //prod-buy-input
 const create_buy_prod = async(req,res) => {
+  upload(req,res, (err) => {
     try {
-        const new_buy_prod = new prod_buy(req.body);
-        await new_buy_prod.save();
+          const new_buy_prod = new prod_buy({
+          name: req.body.name,
+          entry_price: req.body.price,
+          fpo_name: req.body.fpo_name,
+          brand: req.body.brand,
+          total_weight: req.body.total_weight,
+          min_quantity: req.body.quant,
+          colour: req.body.color,
+          cuisine: req.body.cuisine,
+          Bargain: req.body.bargain,
+          city: req.body.city,
+          description: req.body.desc,
+          tags: req.body.tag,
+          contact_no: req.body.contact,
+          images: {data: req.file.fieldname}
+        })
+        new_buy_prod.save();
         res.status(201).json({ message: 'Data saved successfully' });
         
       } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Error! data not saved!' });
       }
+  }) 
 }
 
 //prod-rent-input
 const create_rent_prod = async(req,res) => {
+  upload(req,res, (err) => {
     try {
-        const new_rent_prod = new prod_rent(req.body);
-        await new_rent_prod.save();
+          const new_rent_prod = new prod_rent({
+          name: req.body.name,
+          entry_price: req.body.price,
+          fpo_name: req.body.fpo_name,
+          brand: req.body.brand,
+          total_weight: req.body.total_weight,
+          min_quantity: req.body.quant,
+          colour: req.body.color,
+          cuisine: req.body.cuisine,
+          Bargain: req.body.bargain,
+          city: req.body.city,
+          description: req.body.desc,
+          tags: req.body.tag,
+          contact_no: req.body.contact,
+          images: {data: req.file.fieldname}
+        })
+        new_rent_prod.save();
         res.status(201).json({ message: 'Data saved successfully' });
         
       } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Error! data not saved!' });
       }
+  }) 
 }
 
 //fpo-application-input

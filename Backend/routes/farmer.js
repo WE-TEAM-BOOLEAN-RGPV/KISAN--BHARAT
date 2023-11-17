@@ -1,13 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const path = require('path');
+const express = require('express')
+const router = express.Router()
+const {create_farm} = require('../app')
+const {farm_data} = require('../controller/farmer')
 
-router.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'farmerhome.html'));
-});
-router.get('/cancel', (req, res) => {
-    res.redirect(301, '/landing.html');
-});
+router
+  .get('/get', farm_data)
+  .post('/post', create_farm);
 
-
-module.exports = router;
+module.exports = {router}

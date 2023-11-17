@@ -1,12 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const path = require('path');
+const express = require('express')
+const router = express.Router()
+const {fpo_data} = require('../controller/fpo_app')
+const {create_fpo} = require('../app')
 
-router.get('/apply', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'fpo_mem.html'));
-});
-router.get('/cancel', (req, res) => {
-    res.redirect(301, '/profile.html');
-});
+router
+  .get('/get', fpo_data)
+  .post('/post', create_fpo)
 
-module.exports = router;
+  module.exports = {router}

@@ -1,13 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const path = require('path');
+const express = require('express')
+const router = express.Router()
+const {vendor_data} = require('../controller/vendor')
+const {create_vendor} = require('../app')
 
-router.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'vendorhome.html'));
-});
-router.get('/cancel', (req, res) => {
-    res.redirect(301, '/landing.html');
-});
+router
+  .get('/get', vendor_data)
+  .post('/post', create_vendor);
 
-
-module.exports = router;
+  module.exports = {router}
