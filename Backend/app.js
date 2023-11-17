@@ -1,6 +1,9 @@
-const {farmers, vendors, prod_buy, prod_rent} = require('../model/user');
-const { fpo_app, job_list} = require('../model/app_job');
-  
+const {farmers, vendors, prod_buy, prod_rent} = require('./model/user')
+
+//**(req.body) me formatted json input jayega frontend se schema k according**
+//**routes se dekh kr data fetch kr sakte ho**
+
+//farmer-data-input
 const create_farm = async(req,res) => {
     try {
         const new_farmer = new farmers(req.body);
@@ -13,6 +16,7 @@ const create_farm = async(req,res) => {
       }
 }
 
+//vendor-data-input
 const create_vendor = async(req,res) => {
     try {
         const new_vendor = new vendors(req.body);
@@ -25,10 +29,11 @@ const create_vendor = async(req,res) => {
       }
 }
 
-const create_prodbuy = async(req,res) => {
+//prod-buy-input
+const create_buy_prod = async(req,res) => {
     try {
-        const new_buyprod = new prod_buy(req.body);
-        await new_buyprod.save();
+        const new_buy_prod = new prod_buy(req.body);
+        await new_buy_prod.save();
         res.status(201).json({ message: 'Data saved successfully' });
         
       } catch (err) {
@@ -37,10 +42,11 @@ const create_prodbuy = async(req,res) => {
       }
 }
 
-const create_prodrent = async(req,res) => {
+//prod-rent-input
+const create_rent_prod = async(req,res) => {
     try {
-        const new_buyrent = new prod_rent(req.body);
-        await new_buyrent.save();
+        const new_rent_prod = new prod_rent(req.body);
+        await new_rent_prod.save();
         res.status(201).json({ message: 'Data saved successfully' });
         
       } catch (err) {
@@ -49,10 +55,11 @@ const create_prodrent = async(req,res) => {
       }
 }
 
-const create_fpo_app = async(req,res) => {
+//fpo-application-input
+const create_fpo = async(req,res) => {
     try {
-        const new_fpoapp = new fpo_app(req.body);
-        await new_fpoapp.save();
+        const new_fpo = new fpo_app(req.body);
+        await new_fpo.save();
         res.status(201).json({ message: 'Data saved successfully' });
         
       } catch (err) {
@@ -61,10 +68,11 @@ const create_fpo_app = async(req,res) => {
       }
 }
 
-const create_job_list = async(req,res) => {
+//job-list-input
+const create_job = async(req,res) => {
     try {
-        const new_joblist = new job_list(req.body);
-        await new_joblist.save();
+        const new_job = new job_list(req.body);
+        await new_job.save();
         res.status(201).json({ message: 'Data saved successfully' });
         
       } catch (err) {
@@ -76,8 +84,8 @@ const create_job_list = async(req,res) => {
 module.exports = {
     create_farm,
     create_vendor,
-    create_prodbuy,
-    create_prodrent,
-    create_fpo_app,
-    create_job_list
+    create_buy_prod,
+    create_rent_prod,
+    create_fpo,
+    create_job
 }
