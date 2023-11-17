@@ -24,7 +24,7 @@ const job_list_schema = new mongoose.Schema({
 });
 
 const fpo_app = mongoose.model('fpo_applicants', fpo_app_schema);
-const job_list = mongoose.model('job_list', job_list_schema);
+const job_list = mongoose.model('job_lists', job_list_schema);
 
 module.exports = {
     fpo_app,

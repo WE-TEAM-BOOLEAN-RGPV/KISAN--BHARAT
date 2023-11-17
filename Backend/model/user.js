@@ -20,23 +20,41 @@ const prod_buyschema =  new mongoose.Schema({
 
     name: {type: String, required: true},
     entry_price: {type: Number, min:[0, 'invalid price'], required: true},
+    fpo_name: {type: String, required: true},
+    brand: {type: String},
+    total_weight: {type: Number, min:[0, 'invalid weight']},
+    min_quantity: {type: Number, min:[0, 'invalid weight']},
+    colour: {type: String,},
+    cuisine: {type: String},
+    Bargain: {type: String, required: true},
     city: {type: String, required: true},
     description: {type: String, required: true},
-    contact_no: {type: Number, required: true, unique: true}
+    tags: {type: String, required: true},
+    contact_no: {type: Number, required: true, unique: true},
+    images: {data: Buffer}
 });
 const prod_rentschema =  new mongoose.Schema({
     
     name: {type: String, required: true},
     entry_price: {type: Number, min:[0, 'invalid price'], required: true},
+    fpo_name: {type: String, required: true},
+    brand: {type: String},
+    total_weight: {type: Number, min:[0, 'invalid weight']},
+    min_quantity: {type: Number, min:[0, 'invalid weight']},
+    colour: {type: String,},
+    cuisine: {type: String},
+    Bargain: {type: String, required: true},
     city: {type: String, required: true},
     description: {type: String, required: true},
-    contact_no: {type: Number, required: true, unique: true}
+    tags: {type: String, required: true},
+    contact_no: {type: Number, required: true, unique: true},
+    images: {data: Buffer}
 });
 
-const farmers = mongoose.model("Farmers", farmerschema);
-const vendors = mongoose.model("Vendors", vendorschema);
-const prod_buy = mongoose.model("Product_buy", prod_buyschema);
-const prod_rent = mongoose.model("Product_rent", prod_rentschema);
+const farmers = mongoose.model("farmers", farmerschema);
+const vendors = mongoose.model("vendors", vendorschema);
+const prod_buy = mongoose.model("product_buys", prod_buyschema);
+const prod_rent = mongoose.model("product_rents", prod_rentschema);
 
 module.exports = {
     farmers,
