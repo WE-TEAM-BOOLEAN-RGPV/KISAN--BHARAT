@@ -3,7 +3,7 @@ const {prod_buy} = require('../model/user')
 
 const buy_prod_data = async (req,res) => {
     try{
-        const collection = mongoose.connection.collection('product_buy');
+        const collection = mongoose.connection.collection('product_buys');
         const data = await collection.find({}).toArray();
         res.json(data);
     }catch(err){
