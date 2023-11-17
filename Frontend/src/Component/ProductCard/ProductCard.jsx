@@ -1,5 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  AiFillHeart,
+  AiFillStar,
+  AiOutlineEye,
+  AiOutlineHeart,
+  AiOutlineShoppingCart,
+  AiOutlineStar,
+} from "react-icons/ai";
 
 const ProductCard = () => {
   const navigate=useNavigate();
@@ -43,6 +51,7 @@ const ProductCard = () => {
             </button>
           </div>
         </div>
+        
       </div>
     </div>
   );

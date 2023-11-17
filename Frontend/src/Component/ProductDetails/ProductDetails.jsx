@@ -1,7 +1,9 @@
 import React from "react";
+import ProductCard from "../ProductCard/ProductCard";
 
 const ProductDetails = () => {
   return (
+    <div>
     <div
       className="w-[1200px] h-[500px] m-auto 
     border-2 border-gray-200 rounded-lg shadow flex flex-row  p-5 font-Roboto mt-10"
@@ -99,6 +101,23 @@ const ProductDetails = () => {
           </button>
         </div>
       </div>
+    </div>
+    <div className='px-[5%] mt-10'>
+      <h2 className="bold-text">Related Product</h2>
+      <div className='grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-4 xl:gap-[30px] mb-12 border-0'>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+       
+        </div>  
+    </div>
     </div>
   );
 };

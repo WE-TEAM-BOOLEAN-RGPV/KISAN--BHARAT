@@ -18,14 +18,14 @@ const PreHeader = () => {
              <button
                 type="submit"
                 className="w-[150px] px-6 py-3 h-[50px]  font-semibold text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none"
-                onClick={()=>navigate("/Product/Buy")}
+                onClick={()=>navigate("/Product")}
               >
               Buy
               </button>
               <button
                 type="submit"
                 className="w-[150px] px-6 py-3 h-[50px] font-semibold bg-white text-green-500 border-2 border-green-500 rounded-md  focus:outline-none"
-                onClick={()=>navigate("/Product/Rent")}
+                onClick={()=>navigate("/Product")}
 
               >
                Rent
@@ -42,6 +42,7 @@ const PreHeader = () => {
               </button>
        
         </div>
+        
       </div>
     </>
   );

@@ -37,7 +37,7 @@ const Header = () => {
               Job
                </Link>
                <Link to="/Loan" className='bold-text-sm'>
-               Loan
+              Loan
                </Link>
                <Link to="/Scheme" className='bold-text-sm'>
                Scheme
